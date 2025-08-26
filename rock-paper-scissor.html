@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissor</title>
+</head>
+
+<!-- Computer Randomly selects a move -->
+<!-- Compare them to get vevrdict -->
+<!-- Display in popup (alert) -->
+
+<body>
+  <p>Rock, Paper & Scissor</p>
+  <button onclick="
+  const randNo = Math.random();
+  let cpuMove = '';
+  if(randNo>=0 && randNo<1/3){
+    cpuMove='rock';
+  }else if(randNo>=1/3 && randNo<2/3){
+    cpuMove='paper';
+  } else{
+    cpuMove='scissor';
+  }
+
+  let result='';
+  if (cpuMove=='rock'){
+    result='Tie';
+  }else if (cpuMove=='paper'){
+    result='Lose';
+  }else{
+    result='Win';
+  }
+
+  alert(`You chose rock.\nCPU chose ${cpuMove}.\n${result}`);
+  ">Rock</button>
+  <button onclick="
+  const randNo = Math.random();
+  let cpuMove = '';
+  if(randNo>=0 && randNo<1/3){
+    cpuMove='rock';
+  }else if(randNo>=1/3 && randNo<2/3){
+    cpuMove='paper';
+  } else{
+    cpuMove='scissor';
+  }
+
+  let result='';
+  if (cpuMove=='rock'){
+    result='Win';
+  }else if (cpuMove=='paper'){
+    result='Tie';
+  }else{
+    result='Lose';
+  }
+
+  alert(`You chose paper.\nCPU chose ${cpuMove}.\n${result}`);
+  ">Paper</button>
+  <button onclick="
+  const randNo = Math.random();
+  let cpuMove = '';
+  if(randNo>=0 && randNo<1/3){
+    cpuMove='rock';
+  }else if(randNo>=1/3 && randNo<2/3){
+    cpuMove='paper';
+  } else{
+    cpuMove='scissor';
+  }
+
+  let result='';
+  if (cpuMove=='rock'){
+    result='Lose';
+  }else if (cpuMove=='paper'){
+    result='Won';
+  }else{
+    result='Tie';
+  }
+
+  alert(`You chose scissor.\nCPU chose ${cpuMove}.\n${result}`);
+  ">Scissor</button>
+  <script>
+
+  </script>
+</body>
+
+</html>
