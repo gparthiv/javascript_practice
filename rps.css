@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(30, 30, 30);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: rgb(255, 249, 226);
+  text-align: center;
+}
+
+.title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.scorecard {
+  font-size: x-large;
+  text-align: center;
+}
+
+.icon {
+  height: 50px;
+}
+
+.button-move {
+
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 249, 226);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.txtresult,
+.txtmoves {
+  font-size: larger;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.reset-b {
+  background-color: transparent;
+  color: rgb(255, 249, 226);
+  height: 40px;
+  width: 100px;
+  border: 3px solid rgb(255, 249, 226);
+  cursor: pointer;
+}
