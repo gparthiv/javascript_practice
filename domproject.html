@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SUBSCRIBE</title>
+</head>
+
+<body>
+  <button onclick="check();" class="subscibe-button">Subscribe</button>
+  <script>
+    function check() {
+      const buttonElem = document.querySelector('.subscibe-button');
+      if (buttonElem.innerText === 'Subscribe') {
+        buttonElem.innerHTML = 'Subscribed';
+      } else {
+        buttonElem.innerHTML = 'Subscribe';
+      }
+    }
+  </script>
+</body>
+
+</html>
