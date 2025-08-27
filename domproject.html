@@ -3,11 +3,46 @@
 
 <head>
   <title>SUBSCRIBE</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .s-button{
+      background-color: black;
+      font-weight: bold;
+      height: 35px;
+      width: 100px;
+      border-radius: 17px;
+      color: white;
+    }
+    .calc-button{
+      height: 40px;
+      width: 100px;
+      background-color: green;
+      color: white;
+    }
+    .i-box{
+      height: 35px;
+    }
+  </style>
 </head>
 
 <body>
-  <button onclick="check();" class="subscibe-button">Subscribe</button>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="check();" class="subscibe-button s-button">Subscribe</button>
+  <p>Amazon Shipping Calculator</p>
+  <p>If less than $40, add $10 shipping fee</p>
+  <input type="text" class="input-price i-box" onkeydown="enableEnter(event);">
+  <button class="calc-button"; onclick="totalBill();">Calculate</button>
+  <p class="final-pay"></p>
+
   <script>
+// how to enable button via Enter key
+    function enableEnter(event) {
+      if (event.key === 'Enter')
+        totalBill();
+    }
+
     function check() {
       const buttonElem = document.querySelector('.subscibe-button');
       if (buttonElem.innerText === 'Subscribe') {
@@ -15,6 +50,15 @@
       } else {
         buttonElem.innerHTML = 'Subscribe';
       }
+    }
+
+    function totalBill() {
+      const inputElement = document.querySelector('.input-price');
+      let inp = Number(inputElement.value);
+      if (inp < 40) {
+        inp = inp + 10;
+      }
+      document.querySelector('.final-pay').innerHTML = `$ ${inp}`;
     }
   </script>
 </body>
