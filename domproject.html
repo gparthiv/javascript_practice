@@ -24,6 +24,15 @@
     .i-box{
       height: 35px;
     }
+    .after-sub{
+      background-color: rgb(240, 240, 240);
+      border: none;
+      color: black;
+      font-weight: bold;
+      height: 35px;
+      width: 100px;
+      border-radius: 17px;
+    }
   </style>
 </head>
 
@@ -47,8 +56,10 @@
       const buttonElem = document.querySelector('.subscibe-button');
       if (buttonElem.innerText === 'Subscribe') {
         buttonElem.innerHTML = 'Subscribed';
+        buttonElem.classList.add('after-sub');
       } else {
         buttonElem.innerHTML = 'Subscribe';
+        buttonElem.classList.remove('after-sub');
       }
     }
 
