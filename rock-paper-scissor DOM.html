@@ -17,23 +17,27 @@
 
   <button onclick="playGame('scissor');">Scissor</button>
 
+  <p class="js-result"></p>
+  <p class="js-move"></p>
   <p class="js-score"></p>
 
   <button onclick="
   score.wins=0;
   score.loses=0;
   score.ties=0;
-  localStorage.removeItem('score');"><!--remove from local storage otherwise assigning 0, 0 , 0 wont work-->
+  localStorage.removeItem('score');
+  updateScore();">
+    <!--remove from local storage otherwise assigning 0, 0 , 0 wont work-->
     Reset</button>
 
   <script>
 
-    const score = JSON.parse(localStorage.getItem('score'))
+    let score = JSON.parse(localStorage.getItem('score'))
       //convert JSON string back to Object
       || { wins: 0, loses: 0, ties: 0 };
     //if removed from local storage, it will assign instead of null value on xyz++;
 
-
+    updateScore();
 
     //first score gets updated by wins, loses and ties according to playGame() score.xyz++;
     //then gets stored in local storage as string
@@ -84,13 +88,17 @@
 
       updateScore();
 
-      alert(`You chose ${pMove}.\nCPU chose ${cpuMove}.\n${result}
-      Wins: ${score.wins}  Loses: ${score.loses}  Ties: ${score.ties}`);
+      document.querySelector('.js-result').
+        innerHTML = `You ${result}.`
+      document.querySelector('.js-move').
+        innerHTML = `You ${pMove} ${cpuMove} Computer.`
+      // alert(`You chose ${pMove}.\nCPU chose ${cpuMove}.\n${result}
+      // Wins: ${score.wins}  Loses: ${score.loses}  Ties: ${score.ties}`);
     }
 
-    updateScore(){
-      document.querySelector('js-score')
-      .innerHTML=`Win: ${score.wins}, Losses: ${score.loses} Ties: ${score.ties}`;
+    function updateScore() {
+      document.querySelector('.js-score').
+        innerHTML = `Wins: ${score.wins}  Loses: ${score.loses}  Ties: ${score.ties}`
     }
 
     // let cpuMove = ''; 
