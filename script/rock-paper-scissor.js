@@ -59,7 +59,7 @@ function playGame(pMove) {
   document.querySelector('.js-result').
     innerHTML = `You ${result}.`
   document.querySelector('.js-move').
-    innerHTML = `You <img src="${pMove}-emoji.png" class="icon"><img src="${cpuMove}-emoji.png" class="icon"> Computer.`;
+    innerHTML = `You <img src="assets/${pMove}-emoji.png" class="icon"><img src="assets/${cpuMove}-emoji.png" class="icon"> Computer.`;
   // alert(`You chose ${pMove}.\nCPU chose ${cpuMove}.\n${result}
   // Wins: ${score.wins}  Loses: ${score.loses}  Ties: ${score.ties}`);
 }

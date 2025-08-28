@@ -1,0 +1,36 @@
+body{
+  font-family: 'Arial';
+  font-size: 15px;
+}
+
+.input-grid{
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.list-grid, .input-grid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  row-gap: 10px;
+  column-gap: 20px;
+  align-self: center;
+}
+
+.day-style, .input-style{
+  padding: 7px;
+}
+
+.add-button{
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;  
+}
+
+.delete-button{
+  padding: 7px;
+  background-color: maroon;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
